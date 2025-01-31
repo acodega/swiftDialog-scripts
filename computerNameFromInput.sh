@@ -4,7 +4,6 @@ dialogApp="/usr/local/bin/dialog"
 title="Name This Mac"
 message="Enter the preferred computer name below"
 
-icon="computer"
 
 dialogCMD="$dialogApp -p --title \"$title\" \
 --icon \"$icon\" \
