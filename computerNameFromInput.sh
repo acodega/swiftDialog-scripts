@@ -19,6 +19,6 @@ dialogCMD="$dialogApp -p --title \"$title\" \
 
 computerName=$(eval "$dialogCMD" | awk -F " : " '{print $NF}')
 
-scutil --set HostName "$computerName"
-scutil --set LocalHostName "$computerName"
-scutil --set ComputerName "$computerName"
+scutil --set HostName "$computerName" || echo "Error setting HostName"
+scutil --set LocalHostName "$computerName" || echo "Error setting LocalHostName"
+scutil --set ComputerName "$computerName" ||  echo "Error setting ComputerName"
